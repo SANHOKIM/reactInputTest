@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .inputdiv.fc {
+        border: 1px solid black;
+      }
+      .inputdiv.fc label {
+        color: red;
+      }
+      .inputdiv span {
+        display: none;
+      }
+      .inputdiv.fc span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 인풋박스에 커서들어가면 label글자가 빨강색으로
+    상위div에는 테두리가 적용되게 처리 -->
+    <form
+      action="http://www.naver.com"
+      name="memberfm"
+      onsubmit="return onsubmits()"
+    >
+      <div class="inputdiv">
+        <input type="text" name="nm" id="nm" value="" />
+        <label for="nm">성명</label>
+        <span>한글로만 출력해주세요</span>
+      </div>
+
+      <button type="submit">전송</button>
+    </form>
+    <script>
+      //memberfm.nm.focus();
+
+      function inputfocuscss() {}
+      function onsubmits() {
+        if (memberfm.nm.value === "") {
+          alert("입력해");
+          return false;
+        } else {
+          alert(memberfm.nm.value);
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

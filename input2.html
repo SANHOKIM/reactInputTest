@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form
+      action="http://www.naver.com"
+      name="memberfm"
+      onsubmit="return onsubmits()"
+    >
+      <input type="text" name="nm" id="nm" value="" />
+      <label for="nm">성명</label>
+      <span>한글로만 출력해주세요</span>
+      <button type="submit">전송</button>
+    </form>
+
+    <script>
+      function onsubmits() {
+        if (memberfm.nm.value === "") {
+          alert("입력해");
+          return false;
+        } else {
+          alert(memberfm.nm.value);
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

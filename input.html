@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="memberfm">
+      <input id="nm" type="text" name="nm" />
+      <label for="nm">성명label</label>
+      <span>한글로만 출력해주세요span</span>
+      <button type="submit">전송button</button>
+    </form>
+
+    <!-- input에 성명을 쓰고 버튼을 클릭하면 경고창으로 이름이 보이도록 처리하는 바닐라자바스크립트 기본구문 -->
+
+    <input type="text" id="nameInput" placeholder="성명을 입력하세요" />
+    <button onclick="showName">이름보이기</button>
+
+    <script>
+      function showName() {
+        alert(memberfm.nm.value);
+      }
+
+      document.querySelector("form").addEventListener("submit", () => {
+        showName();
+      });
+
+      /*  // 정체파악하기 외우세요
+                                    console.log(typeof memberfm),
+                                      memberfm,
+                                      Array.isArray(memberfm),
+                                      memberfm.nm; */
+    </script>
+  </body>
+</html>

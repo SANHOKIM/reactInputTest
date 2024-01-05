@@ -1,0 +1,23 @@
+/* reset */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* common */
+.container {
+}
+
+/* #hd */
+
+#hd {
+}
+
+/*hover_white_ver */
+#hd.act {
+}
+
+/* section_visual */
